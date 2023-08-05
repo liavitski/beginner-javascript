@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Sarcastic text generator</title>
+    <!-- <script src="dom-cardio.js" defer></script> -->
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <label for="sarcastic">
+        <input
+          type="radio"
+          value="sarcastic"
+          id="sarcastic"
+          name="filter"
+          checked
+        />
+        Sarcastic
+      </label>
+      <label for="funky">
+        <input type="radio" value="funky" id="funky" name="filter" />
+        Funky
+      </label>
+      <label for="unable">
+        <input
+          type="radio"
+          value="unable"
+          id="unable"
+          name="filter"
+        />
+        Unable to Structure a Sentence
+      </label>
+      <textarea name="text">
+so I was thinking about going to the store</textarea
+      >
+      <p class="result">so I was thinking about going to the store</p>
+    </div>
+  </body>
+</html>
