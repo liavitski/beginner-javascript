@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+  background-color: rgb(39, 113, 193);
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  color: black;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* <<<<<<<< My CSS >>>>>>> */
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopping-list {
+  background: white;
+  flex: 1 1 250px;
+  max-width: 350px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+}
+
+button {
+  color: white;
+  background-color: deeppink;
+  border: none;
+  cursor: pointer;
+}
+
+.x {
+  position: absolute;
+  right: 0;
+  font-size: 0.5rem;
+}
+
+button:hover {
+  background-color: rgb(212, 18, 122);
+}
+
+.shopping-item {
+  margin: 5px 0 5px 0;
+  border-bottom: 1px solid rgba(170, 170, 170, 0.5);
+}
+
+.shopping-item:first-child {
+  margin-top: 20px;
+}
