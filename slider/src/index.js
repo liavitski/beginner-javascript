@@ -34,6 +34,7 @@ function Slider(slider) {
     if (direction === 'back') {
       // make an new array of the new values, and destructure them over and into the prev, current and next variables
       [prev, current, next] = [
+        // get the prev slide, if there is none, get the last slide from the entire slider for wrapping
         prev.previousElementSibling || slides.lastElementChild,
         prev,
         current,
@@ -42,9 +43,11 @@ function Slider(slider) {
       [prev, current, next] = [
         current,
         next,
+        // get the next slide, or if it's at the end, loop around and grab the first slide
         next.nextElementSibling || slides.firstElementChild,
       ];
     }
+
     applyClasses();
   }
 
@@ -54,7 +57,7 @@ function Slider(slider) {
 
   // Event listeners
   prevButton.addEventListener('click', () => move('back'));
-  nextButton.addEventListener('click', move)
+  nextButton.addEventListener('click', move);
 }
 
 const mySlider = Slider(document.querySelector('.slider'));
