@@ -20,7 +20,6 @@
       };
 
       function addAbbreviations(strings, ...values) {
-
         const abbreviated = values.map((value) => {
           if (dict[value]) {
             return `<abbr title="${dict[value]}">${value}</abbr>`;
@@ -29,7 +28,6 @@
         });
 
         return strings.reduce((sentence, string, i) => {
-          
           return `${sentence}${string}${abbreviated[i] || ''}`;
         }, '');
       }
