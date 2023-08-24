@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Tagged Templates</title>
-  <style>
-    .hl {
-      background: #ffc600;
-    }
-  </style>
-</head>
-<body>
-<script>
-  function highlight(strings, ...values) {
-    let str = '';
-    strings.forEach((string, i) => {
-      str += `${string} <span contenteditable class="hl">${values[i] || ''}</span>`;
-    });
-    return str;
-  }
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tagged Templates</title>
+    <style>
+      .hl {
+        background: #ffc600;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const person = {
+        name: 'Pavel',
+        job: 'Web Developer',
+        city: 'Kladno',
+        bio: 'Pavel is a good guy that loves to code!',
+      };
 
-  const name = 'Snickers';
-  const age = 100;
+      const markup = `
+    <div class="person">
+      <h2>${person.name}
+        </h2>
+        <span class="job">${person.job}</span>
+        <p class="location">${person.city}</p>
+        <p class="bio">${person.bio}</p>
+    </div>  
+  `;
 
-  const sentence = highlight`My dog's name is ${name} and he is ${age} years old`;
-  document.body.innerHTML = sentence;
-  console.log(sentence);
-
-</script>
-</body>
+      document.body.innerHTML = markup;
+      console.log(markup);
+    </script>
+  </body>
 </html>
