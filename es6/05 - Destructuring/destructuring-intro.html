@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Destructuring!</title>
-</head>
-<body>
-<script>
-  const person = {
-    first: 'Wes',
-    last: 'Bos',
-    country: 'Canada',
-    city: 'Hamilton',
-    twitter: '@wesbos'
-  };
+  <head>
+    <meta charset="UTF-8" />
+    <title>Destructuring!</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        first: 'Pavel',
+        last: 'Liavitski',
+        country: 'Belarus',
+        city: 'Minsk',
+        twitter: '@PavelLiavitski',
+      };
 
-  const { first, last, twitter } = person;
+      const { first, last } = person;
 
-  const wes = {
-    first: 'Wes',
-    last: 'Bos',
-    links: {
-      social: {
-        twitter: 'https://twitter.com/wesbos',
-        facebook: 'https://facebook.com/wesbos.developer',
-      },
-      web: {
-        blog: 'https://wesbos.com'
-      }
-    }
-  };
+      const pavel = {
+        first: 'Pavel',
+        last: 'Liavitski',
+        links: {
+          social: {
+            twitter: 'https://twitter.com/PavelLiavitski',
+            instagram: 'https://instagram.com/hightimes3',
+          },
+          web: {
+            blog: 'https://crazyassasin51.narod.ru',
+          },
+        },
+      };
 
-  const { twitter: tweet, facebook: fb } = wes.links.social;
+      const { twitter: tweet, instagram: gram } = pavel.links.social;
 
-  const settings = { width: 300, color: 'black' }  // height, fontSize
-  const { width = 100, height = 100, color = 'blue', fontSize = 25} = settings;
+      const settings = { width: 300, color: 'Black' };
 
-</script>
-</body>
+      // const {
+      //   width = 100,
+      //   height = 100,
+      //   color ;= 'blue',
+      //   fontSize = 25,
+      // } = settings;
+
+      // Object Destructuring with variable renaming & default values
+      const { w: width = 400, h: height = 500 } = { w: 800 };
+    </script>
+  </body>
 </html>
