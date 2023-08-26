@@ -1,35 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Array .from() and .of()</title>
-</head>
-<body>
-  <div class="people">
-    <p>Wes</p>
-    <p>Kait</p>
-    <p>Snickers</p>
-  </div>
-<script>
-  // const people = document.querySelectorAll('.people p');
-  // const peopleArray = Array.from(people, person => {
-  //   console.log(person);
-  //   return person.textContent;
-  // });
-  // console.log(peopleArray);
+  <head>
+    <meta charset="UTF-8" />
+    <title>Array .from() and .of()</title>
+  </head>
+  <body>
+    <div class="people">
+      <p>Pavel</p>
+      <p>Valia</p>
+      <p>Tolia</p>
+    </div>
+    <script>
+      // const people = document.querySelectorAll('.people p');
 
-  // // const names = people.map(person => person.textContent);
+      // const peopleArray = Array.from(people, (person) => {
+      //   console.log(person);
+      //   return person.textContent;
+      // });
 
-  function sumAll() {
-    const nums = Array.from(arguments);
-    return nums.reduce((prev, next) => prev + next, 0);
-  }
+      // console.log(peopleArray);
+      function sumAll() {
+        const nums = Array.from(arguments);
+        return nums.reduce((prev, next) => prev + next, 0);
+      }
 
-  sumAll(2, 34, 23, 234, 234, 234234, 234234, 2342);
-
-  const ages = Array.of(12,4,23,62,34);
-  console.log(ages);
-
-</script>
-</body>
+      sumAll(2, 664, 3, 45, 22, 4442, 3, 0, 0, 0.66);
+    </script>
+  </body>
 </html>
