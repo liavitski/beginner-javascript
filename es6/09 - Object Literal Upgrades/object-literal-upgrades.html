@@ -1,59 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Object Literal Upgrades</title>
-</head>
-<body>
-<script>
-  const first = 'snickers';
-  const last = 'bos';
-  const age = 2;
-  const breed = 'King Charles Cav';
-  const dog = {
-    firstName: first,
-    last,
-    age,
-    breed,
-    pals: ['Hugo', 'Sunny']
-  };
-  console.log(dog);
+  <head>
+    <meta charset="UTF-8" />
+    <title>Object Literal Upgrades</title>
+  </head>
+  <body>
+    <script>
+      const first = 'snickers';
+      const last = 'bos';
+      const age = 2;
+      const breed = 'King Charles Cav';
+      const dog = {
+        firstName: first,
+        last,
+        age,
+        breed,
+        pals: ['Hugo', 'Sunny'],
+      };
 
-  const modal = {
-    create(selector) {
+      const modal = {
+        create(selector) {},
+        open(content) {},
+        close(goodbye) {},
+      };
 
-    },
-    open(content) {
+      const key = 'inkColor';
+      const value = '#ffc600';
 
-    },
-    close(goodbye) {
+      const tShirt = {
+        [key]: value,
+        [`${key}Opposite`]: value,
+      };
 
-    }
-  }
+      const keys = ['size', 'color', 'weight'];
+      const values = ['medium', 'red', 100];
 
-  function invertColor(color) {
-      return '#' + ("000000" + (0xFFFFFF ^ parseInt(color.substring(1),16)).toString(16)).slice(-6);
-  }
+      // const shirt = {
+      //   [keys.shift()]: values.shift(),
+      //   [keys.shift()]: values.shift(),
+      //   [keys.shift()]: values.shift(),
+      // };
 
-  const key = 'pocketColor';
-  const value = '#ffc600';
+      // Iterate over object properties
+      const person = {
+        name: 'John',
+        age: 30,
+        job: 'Developer',
+      };
 
-  const tShirt = {
-    [key]: value,
-    [`${key}Opposite`]: invertColor(value)
-  };
+      // for (const key in person) {
+      //   console.log(key + ': ' + person[key]);
+      // }
 
-  const keys = ['size', 'color', 'weight'];
-  const values = ['medium', 'red', 100];
+      // Summing Up Object Values
 
-  const shirt = {
-    [keys.shift()]: values.shift(),
-    [keys.shift()]: values.shift(),
-    [keys.shift()]: values.shift(),
-  }
-  console.log(shirt);
+      const expenses = {
+        groceries: 100,
+        bills: 200,
+        entertainment: 50,
+      };
 
+      let totalExpenses = 0;
 
-</script>
-</body>
+      // for (const category in expenses) {
+      //   totalExpenses += expenses[category];
+      // }
+
+      // console.log('Total expenses:', totalExpenses);
+
+      // Counting Object Properties
+      const student = {
+        name: 'Alice',
+        age: 22,
+        major: 'Computer Science',
+        GPA: 3.8,
+      };
+
+      let propSum = 0;
+
+      for (const prop in student) {
+        propSum++;
+      }
+
+      // console.log(propSum);
+
+      // Filtering Object Properties
+      const book = {
+        title: 'The Great Gatsby',
+        author: 'F. Scott Fitzgerald',
+        year: 1925,
+        genre: 'Novel',
+      };
+
+      // for (const key in book) {
+      //   if (key !== 'year') {
+      //     console.log(key + ': ' + book[key]);
+      //   }
+      // }
+
+      // Dublicating Object Properties
+      const source = {
+        a: 1,
+        b: 2,
+        c: 3,
+      };
+
+      const target = {};
+
+      for (const key in source) {
+        target[key] = source[key];
+      }
+
+      console.log(target);
+    </script>
+  </body>
 </html>
